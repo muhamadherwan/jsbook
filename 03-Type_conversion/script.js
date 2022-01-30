@@ -29,7 +29,7 @@ val = Number([1, 2, 3, 4]); // return NaN
 val = parseInt('100.10'); // convert to nondecimal numbers
 val = parseFloat('100.01'); // convert to decimal numbers
 
-console.log(val)
+console.log(val);
 console.log(val.toFixed(1)); // convert to float number based on how many place defined
 
 // Type Coersion
