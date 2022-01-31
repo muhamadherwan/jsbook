@@ -46,3 +46,63 @@ if (age2 < 16 || age2 > 65) {
     console.log(`${people} have been register in the marathon.`)
 }
 
+// IF STATEMENT
+// if (something) {
+//     do something...
+// } else if (something else ) {
+//     do something else... 
+// } else {
+//     do else...
+// }
+
+// in js can do if statement without curly bracket {}
+
+// Ternary operator
+// boolean ? 'true' : 'false';
+let id = 100;
+console.log(id === 100 ? 'correct' : 'incorrect');
+
+// Switch statement
+const color = 'green';
+switch (color) {
+    case 'red':
+        console.log('color is red.');
+        break;
+    case 'blue':
+        console.log('color is blue.');
+        break;
+    default:
+        console.log('color is not red or blue+.');
+        break;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
