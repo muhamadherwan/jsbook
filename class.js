@@ -30,11 +30,44 @@ class Person {
     static addNumber(x,y) {
         return x + y;
     }
-
-
 }
 
-// instant new object
+// inheritance (subclass) exp: inherit Person class
+class Customer extends Person {
+    constructor(firstName, lastName, phone, membership){
+        // get the parent properties
+        super(firstName, lastName);
+
+        this.phone = phone;
+        this.membershop = membership;
+    }
+
+    // method
+    getProduct() {
+        return 'laptop, gaming pc, keyboard.'
+    }
+    // static method
+    static getFee(){
+        return 500;
+    }
+} 
+
+// instant new customer object
+customer1 = new Customer("Zuck", "Keberg", "755-25-25", "Gold");
+
+console.log(customer1);
+
+// inherit person method
+console.log(customer1.greeting());
+
+// static in subclass exp:
+console.log(Customer.getFee());
+
+// subclass method exp
+console.log(customer1.getProduct());
+
+
+// instant new person object
 ezzi = new Person("Ezzi","Moralez", "12-27-1980");
 
 console.log(ezzi.greeting());
