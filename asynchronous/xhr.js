@@ -1,4 +1,4 @@
-document.getElementById('button').addEventListener('click, loadData');
+document.getElementById('button').addEventListener('click', loadData);
 
 function loadData(){
     // create an xhr object
@@ -8,11 +8,23 @@ function loadData(){
     xhr.open('GET', 'data.txt', true);
 
     // get the data
-    xhr.onload = function(){
+    xhr.onload = function() {
+        // check the data http statuses
+        if (this.status === 200) {
+            // console.log(this.responseText);
+            // put the data in the ui
+            document.getElementById('output').innerHTML = `<h1>${this.responseText}</h1>`;
+            
+        }
+    }
 
+    // display error if any
+    xhr.onerror = function() {
+        console.log('Request error...');
     }
 
     // send the xhr object
+    xhr.send();
 }
 
 // HTTP Statuses
