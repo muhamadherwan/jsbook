@@ -9,7 +9,16 @@ function createPost(post) {
     return new Promise(function(resolve, reject){
         setTimeout(() => {
             posts.push(post);
-            resolve();
+
+            // error example
+            const error = false;
+
+            if (!error) {
+                resolve();
+            } else {
+                reject("error: something when wrong");
+            }
+
         }, 2000);
     });
 }
@@ -27,4 +36,8 @@ function getPosts() {
 // create the new post and callback the getPosts function:
 const newPost = {title: 'Post three', body: 'This is post three'};
 
-createPost(newPost).then(getPosts);
+createPost(newPost)
+.then(getPosts)
+.catch(function(err){
+    console.log(err);
+});
