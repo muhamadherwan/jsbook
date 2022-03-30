@@ -29,11 +29,28 @@ re = /Hel{2,}o/i; // must occur at least {m} amount of time
 // parentheses () - grouping
 re = /^([0-9]x){3}$/;
 
+// Shorthand character classes
+re = /\w/; // word character - alphanumeric or _
+re = /\w+/; // word character - alphanumeric or _ one or more
+re = /\W/; // Non-word character
+re = /\d/; // match any digit
+re = /\d+/; // match any digit 0 or more times
+re = /\D/; // match any non-digit
+re = /\s/; // match whitespace char
+re = /\S/; // match any non-whitespace char
+re = /Hell\b/i; // word boundary
+
+// assertions
+// re = /x(?=y)/; // match x only if followed by y
+re = /x(?!y)/; // match x only if not followed by y
+
 // string to match
 // const str = "Hesllokkafd World";
 // const str = "Grey?";
 // const str = "Hellllllllllllllllo";
-const str = "3x3x3x";
+// const str = "3x3x3x";
+// const str = "Hello from Hell";
+const str = "dkjjjxdd";
 
 // log results
 const result = re.exec(str);
