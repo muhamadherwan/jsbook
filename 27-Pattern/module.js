@@ -26,6 +26,7 @@
 //   };
 // })();
 
+// use the pattern
 // UICtrl.callChangeText();
 
 // REVELING MODULE PATTERN
@@ -48,5 +49,6 @@ const ItemCtrl = (function () {
   };
 })();
 
+// use it
 ItemCtrl.add({ id: 1, name: "Daigo" });
 console.log(ItemCtrl.get(1));
